@@ -119,14 +119,30 @@ footer {
   justify-content: center; 
   align-items: center;
   text-align: center;
-  margin: auto;
-  
+  /*margin: auto;
   /*padding-left: 70px; 
   padding-right: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 10px;*/
-  
+  margin-bottom: 30px;
+}
+
+@media (min-width: 750px) {
+  .hero_section {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 50px;
+    margin: auto;
+  }
+  .hero_left {
+    flex: 1;
+    text-align: center;
+  }
+  .hero_right {
+    flex: 1;
+    text-align: center;
+  }
 }
 
 .hero_right {
@@ -144,7 +160,6 @@ footer {
   padding-top: 10px;
   justify-content: center;
   align-items: center;
-  
 }
 
 .hero_left p {
@@ -155,7 +170,6 @@ footer {
   margin-bottom: 30px;
 }
 
-
 .blue-box {
   position: absolute;
   top: 30%;
@@ -164,13 +178,12 @@ footer {
   height: 70%; 
   background-color: var(--light-blue);
   border-radius: 0px 0px 0px 125px;
-  
   z-index: -1;
 }
 
 .imageBook  {
   justify-content: center; */
-  margin:auto;
+  /* margin:auto; */
   align-items: center;
 }
 
@@ -236,13 +249,17 @@ footer {
   padding-bottom: 50px;
   gap: 50px;*/
   margin: auto;
+  margin-top: 50px;
+  justify-content: center;
 }
 
 .features p {
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
-  margin: inherit;
-  padding-bottom: 20px;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  padding-bottom: 10px;
   color: var(--grey);
 }
 
@@ -255,12 +272,12 @@ footer {
   
 }
 
-/*@media (min-width: 600px) {
+@media (min-width: 600px) {
   
-  .hero_section {
-    flex-direction: row-reverse;
-    
-    /*gap: 15px;
+  .tab {
+    flex-direction: row;
+  }    
+}    /*gap: 15px;
     margin-bottom: 15px;
 */
 /*  }
@@ -290,20 +307,22 @@ footer {
   font-size: 16px;
   border-bottom: 1px solid #8a8989;
   color: grey;
-  
+  justify-content: center;
   text-align: center;
 }
 
 .button_tablink:hover {
   /*border-bottom-color: #cc3b17; */
-  color:#d3460f
+  color:#d3460f;
+  border-bottom: 3px solid #cc3b17;
+
 }
 
 .button_tablink.active {
   border-bottom: 3px solid #cc3b17;
   color:#000000
 }
-/*
+
 #simpleBookmark {
   display: block;
 }
@@ -318,7 +337,7 @@ footer {
   display: none;
 }
 
-
+/*
 #speadyButton:active {
   #simpleBookmark {
     display: absolute;
