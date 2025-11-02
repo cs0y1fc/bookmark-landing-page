@@ -25,6 +25,7 @@ body {
     text-decoration: none; /* Quita el subrayado */
     color: #000000;
     font-weight: 500;
+    margin-left: 20px;
 }
 
 .main-header a:hover {
@@ -39,7 +40,7 @@ body {
   border-radius: 15px;
   border-width: 2px;
   border-style: solid;
-
+  margin-left: 20px
 
 }
 
@@ -50,13 +51,12 @@ body {
 
   }
 
-body {
-  display: flex;
-  flex-direction: column;
+main {
+  display: block;
   
-  justify-content: center;
+  
   background-color: rgb(255, 255, 255);
-  margin: 40px;
+  margin: 0px;
 }
 
 footer {
@@ -66,31 +66,45 @@ footer {
   align-items: flex-end;
 }
 
-.footer {
+footer {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
 }
 
-.bookmark-illustration {
+.hero_section {
   display: flex;
-
-  justify-content: space-around;
+  flex-direction: column-reverse;
+  
   /*padding-left: 70px; */
   padding-right: 100px;
   padding-top: 50px;
   padding-bottom: 50px;
-  gap: 50px;
-  
-}
-.bookmark-left  {
-  padding-top: 100px;
-  align-items: center;
-  max-width: 450px;
+  gap: 10px;
   
 }
 
-.bookmark-left p {
+@media only screen and (min-width: 600px) {
+  .hero_section {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.buttons-hero {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero-left  {
+  padding-top: 100px;
+  align-items: center;
+  max-width: 450px;
+  margin:auto;
+}
+
+.hero-left p {
   margin-top: 20px;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -125,7 +139,7 @@ footer {
 .get-it-button {
   
   color: rgb(0, 0, 0);
-  padding: 15px 40px;
+  padding: 10px 20px;
   border-radius: 15px;
   margin: 20px;
   border-style: solid;
@@ -140,7 +154,110 @@ footer {
     background-color: hsl(239, 89%, 48%); /* Color al pasar el ratón */
 }
 
-.features {
-  display: flex;
+/*.features h1 p {
+  /*display: flex; *
+  flex-direction: column;
   justify-content: center;
+  
+  text-align: center;}*/
+
+.features {
+/*   display: flex;
+  flex-direction: column; */
+
+  text-align: center;
+  /*padding-left: 70px; */
+  /*padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;*/
+  margin: auto;
+}
+
+.features p {
+  max-width: 300px;
+  width: 100%;
+  margin: inherit;
+  padding-bottom: 20px;
+  color: rgb(122, 122, 122);
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  
+}
+
+@media only screen and (min-width: 600px) {
+  .tab {
+    flex-direction: row;
+    padding-bottom: 15px;
+
+  }
+}
+
+
+.button_tablink {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 300px;
+  padding: 20px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-bottom: 1px solid #8a8989;
+  color: grey;
+  
+  text-align: center;
+}
+
+.button_tablink:hover {
+  /*border-bottom-color: #cc3b17; */
+  color:#d3460f
+}
+
+.button_tablink.active {
+  border-bottom: 3px solid #cc3b17;
+  color:#000000
+}
+/*
+#simpleBookmark {
+  display: block;
+}
+
+
+#speadySearching {
+  display: none;
+}
+
+
+#easySharing {
+  display: none;
+}
+
+
+#speadyButton:active {
+  #simpleBookmark {
+    display: absolute;
+  }
+  #speadySearching {
+    display: none
+  }
+  #simpleBookmark {
+    display: none;
+  }
+}
+
+#easyButton:active {
+  #simpleBookmark {
+    display: none;
+  }
+  #speadySearching {
+    display: none;
+  }
+  #easySharing {
+    display: absolute;
+  }
 }
