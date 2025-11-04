@@ -9,7 +9,8 @@ body {
   --light-blue: hsl(239, 95%, 63%);
   --dark-blue: hsl(240, 91%, 27%);
   --red: #fd0000;
-  --grey: rgb(160, 160, 160);
+  --grey: rgb(141, 141, 141);
+  --grey-light: #dddcdc;
 }
 
 /* Párrafos y texto normal (Peso 400) */
@@ -191,10 +192,10 @@ footer {
 }
 .blue-box2 {
   position: absolute;
-  top: 40%;
+  top: 20%;
   right: 20%;
   width: 80%;
-  height: 70%; 
+  height: 90%; 
   background-color: var(--light-blue);
   border-radius: 0px 0px 125px 0px;
   z-index: -1;
@@ -210,7 +211,7 @@ footer {
 .buttons-hero {
   display: flex;
   
-  justify-content: center;
+  justify-content:center;
 }
 
 @media (min-width: 750px) {
@@ -248,7 +249,7 @@ footer {
 .get-it-chrome {
   
   color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   margin: 20px;
   border-style: solid;
@@ -261,7 +262,7 @@ footer {
 
 .get-it-firefox {
   
-  color: rgb(0, 0, 0);
+  color: rgb(49, 49, 49);
   padding: 10px 20px;
   border-radius: 5px;
   margin: 20px;
@@ -314,7 +315,7 @@ footer {
   width: 100%;
   margin: auto;
   margin-bottom: 40px;
-  margin-top: 20px;
+  margin-top: 0 px;
   padding-bottom: 10px;
   color: var(--grey);
 }
@@ -394,13 +395,13 @@ input[type="radio"] {
     cursor: pointer;
     text-align: center;
     color: #818181;
-    border-bottom: 1px solid #868686;
+    border-bottom: 1px solid var(--grey-light);
     margin: 0px 0px;
     /* Para que ocupen el mismo espacio */
 }
 
 .tab-label:first-child {
-    border-top: 1px solid #868686; /* Borde superior en el primer label */
+    border-top: 1px solid var(--grey-light); /* Borde superior en el primer label */); /* Borde superior en el primer label */
 }
 
 .tab-label:hover {
