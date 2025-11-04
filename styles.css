@@ -17,9 +17,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 70px;
-  padding-right: 50px;
-  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 35px;
+  padding-top: 35px;
   padding-bottom: 50px;
   
 }
@@ -37,6 +37,7 @@ body {
 @media (min-width: 750px) {
   .header-group-right2 {
     display: flex;
+    gap: 20px;
   }
   
   .header-group-right1 {
@@ -47,7 +48,7 @@ body {
 .main-header a {
     text-decoration: none; /* Quita el subrayado */
     color: black;
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 20px;
 }
 
@@ -58,13 +59,16 @@ body {
 .login-button {
   background-color: var(--red);
   color: white;
-  padding: 10px 30px;
+  padding: 5px 10px 5px 10px;
   border-color: var(--red);
-  border-radius: 15px;
+  border-radius: 5px;
   border-width: 2px;
   border-style: solid;
-  margin-left: 20px
-
+  margin-left: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
 }
 
 .login-button:hover {
@@ -75,9 +79,13 @@ body {
   }
 
 body {
-  
+  margin:0;
+  padding:0;
+ 
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /*overflow-x: hidden;*/
+  font-size: 16px;
+  line-height: 1.6;
   
   display: flex;
   flex-direction: column;
@@ -86,6 +94,11 @@ body {
   /*place-items: center; */
   /*min-height: 100vh;*/
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+} 
 /*
 .container {
   
@@ -163,7 +176,7 @@ footer {
 }
 
 .hero_left p {
-  width: 60%;
+  width: 85%;
   justify-content: center;
   color: var(--grey);
   margin: auto;
@@ -197,11 +210,12 @@ footer {
   
   color: rgb(255, 255, 255);
   padding: 10px 20px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin: 20px;
   border-style: solid;
   background-color: var(--light-blue);
   border-width: 0px;
+  font-weight: bold;
 
 }
 
@@ -209,12 +223,13 @@ footer {
   
   color: rgb(0, 0, 0);
   padding: 10px 20px;
-  border-radius: 15px;
+  border-radius: 5px;
   margin: 20px;
   border-style: solid;
   background-color: rgb(226, 225, 225);
   border-width: 0px;
 
+  font-weight: bold;
 }
 
 
@@ -254,110 +269,143 @@ footer {
 }
 
 .features p {
-  max-width: 500px;
+  max-width: 80%;
   width: 100%;
-  margin: auto;
+  margin: 20px 30px;
   margin-bottom: 40px;
   margin-top: 20px;
   padding-bottom: 10px;
   color: var(--grey);
 }
 
-.tab {
+
+
+input[type="radio"] {
+  display: none;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+
+
+.tab-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-bottom: 30px;
-  padding-bottom: 5px;
-  
+  justify-content: space-evenly;
+  align-items: center;
+  position:relative;
+
 }
+
+/* --- Configuración básica para centrarlo --- */
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+*/
+
+.tabs-container {
+    width: 100%;
+    /*max-width: 500px;*/ /* Ancho máximo en móvil */
+    /*background: #ffffff; */
+    border-radius: 8px;
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+    overflow: hidden; /* Para que los bordes redondeados afecten a los hijos */
+    justify-content: center;
+    margin: 0px 0px;
+  }
+
+/* --- 1. Ocultamos los radio buttons --- */
+.tabs-container input[type="radio"] {
+    display: none; /* No los necesitamos visibles */
+}
+
+/* --- 2. Estilo de los labels (verticales) --- */
+.tab-labels {
+    display: flex;
+    flex-direction: column; /* <-- Esto los apila verticalmente */
+    
+    /* margin: 20px 10px; */
+    justify-content: center;
+    padding-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.tab-label {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    color: #818181;
+    border-bottom: 1px solid #868686;
+    flex-grow: 1; /* Para que ocupen el mismo espacio */
+}
+
+/* Se elimina el borde superior del primer elemento que estaba comentado */
 
 @media (min-width: 600px) {
-  
-  .tab {
+  .tab-labels {
     flex-direction: row;
-  }    
-}    /*gap: 15px;
-    margin-bottom: 15px;
-*/
-/*  }
-
-  .hero_left {
-    flex: 1;
+    border-bottom: 1px solid #868686; /* Mover el borde al contenedor */
   }
-
-  .hero_right {
-    flex: 1;
+  .tab-label {
+    border-bottom: none; /* Quitar el borde individual */
   }
-*/
-  /* .hero_section block {
-    flex:1;
-    margin-bottom: 0;
-  } 
-}
-*/
-
-
-.button_tablink {
-  background-color: rgb(255, 255, 255);
-  border: none;
-  width: 300px;
-  padding: 20px 10px;
-  cursor: pointer;
-  font-size: 16px;
-  border-bottom: 1px solid #8a8989;
-  color: grey;
-  justify-content: center;
-  text-align: center;
 }
 
-.button_tablink:hover {
-  /*border-bottom-color: #cc3b17; */
+.tab-label:hover {
   color:#d3460f;
   border-bottom: 3px solid #cc3b17;
-
 }
 
-.button_tablink.active {
-  border-bottom: 3px solid #cc3b17;
-  color:#000000
+/* --- 3. Ocultamos todos los contenidos por defecto --- */
+.tab-content-area .content {
+    display: none; /* Oculta todos los contenidos */
+    padding: 25px;
 }
 
-#simpleBookmark {
-  display: block;
+/* --- 4. LA MAGIA: Mostrar el contenido activo --- */
+
+/* "Cuando el input con id 'tab1' esté :checked,
+    busca un HERMANO (~) llamado '.tab-content-area'
+    y, dentro de él, muestra el hijo '#content1'"
+*/
+.tabs-container #tab1:checked ~ .tab-content-area #content1 {
+    display: block;
 }
 
-
-#speadySearching {
-  display: none;
+.tabs-container #tab2:checked ~ .tab-content-area #content2 {
+    display: block;
 }
 
-
-#easySharing {
-  display: none;
+.tabs-container #tab3:checked ~ .tab-content-area #content3 {
+    display: block;
 }
 
-/*
-#speadyButton:active {
-  #simpleBookmark {
-    display: absolute;
-  }
-  #speadySearching {
-    display: none
-  }
-  #simpleBookmark {
-    display: none;
-  }
-}
+/* --- 5. (Opcional) Estilo para el label activo --- */
 
-#easyButton:active {
-  #simpleBookmark {
-    display: none;
-  }
-  #speadySearching {
-    display: none;
-  }
-  #easySharing {
-    display: absolute;
-  }
+/* "Cuando el input 'tab1' esté :checked,
+    busca un HERMANO (~) llamado '.tab-labels'
+    y, dentro de él, aplica este estilo al label[for="tab1"]"
+*/
+.tabs-container #tab1:checked ~ .tab-labels label[for="tab1"],
+.tabs-container #tab2:checked ~ .tab-labels label[for="tab2"],
+.tabs-container #tab3:checked ~ .tab-labels label[for="tab3"] {
+    color: #080808; /* Color de activo */
+    /*background-color: #9c7777; */
+    /* Simulamos un "borde activo" */
+    /*box-shadow: inset 0 -3px 0 #337ab7; */
 }

@@ -17,7 +17,7 @@
         </div>
         <div class="header-group-right2">
             <nav>
-            <a href="#">FEATURES</a>
+            <a href="#features">FEATURES</a>
             <a href="#">PRICING</a>
             <a href="#">CONTACT</a>
             <button class="login-button">LOGIN</button>
@@ -35,7 +35,7 @@
             </div>
             <div class="hero_left">
                 <h1>A Simple Bookmark Manager</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias et mollitia ipsum dolores architecto, aspernatur, totam quod neque rerum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias!</p>
                 <div class="buttons-hero">
                     <button class="get-it-chrome">Get it on Chrome</button>
                     <button class="get-it-firefox">Get it on Firefox</button>
@@ -45,37 +45,67 @@
             
         </section>
         
-        <section class="features">
+        <div class="features" id="features">
             
-                <h2>Features</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias et mollitia ipsum dolores architecto, aspernatur, totam quod neque rerum!</p>
-                
-                <div class="tab">
-                    <button id="simpleButton" class="button_tablink" >Simple Bookmarking</button>
-                    <button id="speadyButton" class="button_tablink" >Speady Searching</button>
-                    <button id="easyButton" class="button_tablink" >Easy Sharing</button>
-                </div>
-            
-                <div class="tabcontent-container">
-                    <article id="simpleBookmark" class="tabcontent">
-                        <img src="starter-code/images/illustration-features-tab-1.svg" alt="Feature 1">
-                        <h2>Bookmark in one click</h2>
-                        <p><center>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias et mollitia ipsum dolores architecto, aspernatur, totam quod neque rerum!</center></p>
-                    </article>
-                    <article id="speadySearching" class="tabcontent">
-                        <img src="starter-code/images/illustration-features-tab-2.svg" alt="Feature 2">
-                        <h2>Simple Bookmarking</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias et mollitia ipsum dolores architecto, aspernatur, totam quod neque rerum!</p>
-                    </article>
-                    <article id="easySharing" class="tabcontent">
-                        <img src="starter-code/images/illustration-features-tab-3.svg" alt="Feature 3">
-                        <h2>Easy Sharing</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias et mollitia ipsum dolores architecto, aspernatur, totam quod neque rerum!</p>
-                    </article>
-
-                </div>
-        </section>
+            <h2>Features</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias !</p>
         
+                
+     
+        <!--  et mollitia ipsum dolores architecto, aspernatur, totam quod neque rerum-->
+            <div class="tabs-container">
+                
+                <input type="radio" id="tab1" name="tabs-grupo" checked="checked">
+                <input type="radio" id="tab2" name="tabs-grupo">
+                <input type="radio" id="tab3" name="tabs-grupo">
+
+                <div class="tab-labels">
+                    <label for="tab1" class="tab-label">Simple Bookmarking</label>
+                    <label for="tab2" class="tab-label">Speedy Searching</label>
+                    <label for="tab3" class="tab-label">Easy Sharing</label>
+                </div>
+            
+            <d class="tab-content-area">
+                <div class="content" id="content1">
+                    <div>
+                        <img src="starter-code/images/illustration-features-tab-1.svg" alt="Contenido de Simple Bookmarking">
+                    </div>
+                    <div>
+                        <h3>Simple Bookmarking</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                        <button class="more-info">More Info</button>
+                    </div>
+                </div>
+                    
+                <div class="content" id="content2">
+                    <div>
+                        <img src="starter-code/images/illustration-features-tab-2.svg" alt="Contenido de Speedy Searching">
+                    </div>
+                    <div>
+                        <h3>Speedy Searching</h3>
+                        <p>Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+                        <button class="more-info">More Info</button>
+                    </div>
+                </div>
+                <div class="content" id="content3">
+                    <div>
+                        <img src="starter-code/images/illustration-features-tab-3.svg" alt="Contenido de Easy Sharing">
+                    </div>
+                    <div>
+                        <h3>Easy Sharing</h3>
+                        <p>Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+                        <button class="more-inf get-it-chrome">More Info</button>
+                    
+                </div>
+            
+            </div>
+
+        </div>
+
+
+
+
+
 
 
     </main>
