@@ -82,7 +82,7 @@ body {
   margin:0;
   padding:0;
  
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Rubik'sans-serif;
   /*overflow-x: hidden;*/
   font-size: 16px;
   line-height: 1.6;
@@ -93,6 +93,19 @@ body {
   justify-content: center */
   /*place-items: center; */
   /*min-height: 100vh;*/
+}
+
+/* Párrafos y texto normal (Peso 400) */
+p, .main-header a {
+  font-weight: 400;
+}
+
+/* Títulos y botones (Peso 500) */
+h1, h2, h3,
+.login-button,
+.get-it-chrome,
+.get-it-firefox {
+  font-weight: 500;
 }
 
 img {
@@ -215,7 +228,7 @@ footer {
   border-style: solid;
   background-color: var(--light-blue);
   border-width: 0px;
-  font-weight: bold;
+
 
 }
 
@@ -229,7 +242,7 @@ footer {
   background-color: rgb(226, 225, 225);
   border-width: 0px;
 
-  font-weight: bold;
+  
 }
 
 
@@ -340,21 +353,65 @@ input[type="radio"] {
     /* margin: 20px 10px; */
     justify-content: center;
     padding-bottom: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+
     
 }
 
 .tab-label {
+    position: relative; /* Requerido para el pseudo-elemento ::after */
     padding: 15px;
     cursor: pointer;
     text-align: center;
     color: #818181;
     border-bottom: 1px solid #868686;
-    flex-grow: 1; /* Para que ocupen el mismo espacio */
+    margin: 0px 0px;
+    /* Para que ocupen el mismo espacio */
+}
+
+.tab-label:first-child {
+    border-top: 1px solid #868686; /* Borde superior en el primer label */
+}
+
+.tab-label:hover {
+    color:var(--orange); /* Color al pasar el ratón */
 }
 
 /* Se elimina el borde superior del primer elemento que estaba comentado */
+
+.tab-content-area .content {
+    display: none; /* Oculta todos los contenidos */
+    /* padding: 25px; */
+    flex-direction: column;
+    margin: 30px 40px;
+    gap: 30px;
+}
+
+.tab-content-area .content > div {
+    
+  } 
+.tabs-container .content .more-inf-button {
+  display: none;
+}
+
+/* --- 4. LA MAGIA: Mostrar el contenido activo --- */
+
+/* "Cuando el input con id 'tab1' esté :checked,
+    busca un HERMANO (~) llamado '.tab-content-area'
+    y, dentro de él, muestra el hijo '#content1'"
+*/
+.tabs-container #tab1:checked ~ .tab-content-area #content1,
+.tabs-container #tab2:checked ~ .tab-content-area #content2,
+.tabs-container #tab3:checked ~ .tab-content-area #content3 {
+    display: flex;
+}
+
+label {
+  border-bottom: var(--orange);
+}
+
 
 @media (min-width: 600px) {
   .tab-labels {
@@ -364,36 +421,35 @@ input[type="radio"] {
   .tab-label {
     border-bottom: none; /* Quitar el borde individual */
   }
-}
-
-.tab-label:hover {
-  color:#d3460f;
-  border-bottom: 3px solid #cc3b17;
-}
-
-/* --- 3. Ocultamos todos los contenidos por defecto --- */
-.tab-content-area .content {
-    display: none; /* Oculta todos los contenidos */
-    padding: 25px;
-}
-
-/* --- 4. LA MAGIA: Mostrar el contenido activo --- */
-
-/* "Cuando el input con id 'tab1' esté :checked,
-    busca un HERMANO (~) llamado '.tab-content-area'
-    y, dentro de él, muestra el hijo '#content1'"
-*/
-.tabs-container #tab1:checked ~ .tab-content-area #content1 {
+  .tab-label:first-child {
+    border-top: none; /* Borde superior en el primer label */
+  }
+  .tab-content-area .content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      /* gap: 50px; */
+  }
+  .tab-content-area .content > div {
+    flex: 1;
+    text-align: left;
+  }
+  .tab-content-area .content > div:nth-child(2) h3,
+  .tab-content-area .content > div:nth-child(2) p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .tab-content-area .content > div:nth-child(2) p {
+    margin-bottom: 20px;
+  }
+  .tab-content-area .content > div:nth-child(2) .get-it-chrome {
+    margin-left: 0;
+  }
+  .tab-content-area .content .more-inf-button {
     display: block;
+  }
 }
 
-.tabs-container #tab2:checked ~ .tab-content-area #content2 {
-    display: block;
-}
-
-.tabs-container #tab3:checked ~ .tab-content-area #content3 {
-    display: block;
-}
 
 /* --- 5. (Opcional) Estilo para el label activo --- */
 
@@ -405,7 +461,18 @@ input[type="radio"] {
 .tabs-container #tab2:checked ~ .tab-labels label[for="tab2"],
 .tabs-container #tab3:checked ~ .tab-labels label[for="tab3"] {
     color: #080808; /* Color de activo */
-    /*background-color: #9c7777; */
-    /* Simulamos un "borde activo" */
-    /*box-shadow: inset 0 -3px 0 #337ab7; */
 }
+
+.tabs-container #tab1:checked ~ .tab-labels label[for="tab1"]::after,
+.tabs-container #tab2:checked ~ .tab-labels label[for="tab2"]::after,
+.tabs-container #tab3:checked ~ .tab-labels label[for="tab3"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Se posiciona en el mismo lugar que el borde gris */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10em;
+    height: 3px;
+    background-color: var(--orange);
+}
+
