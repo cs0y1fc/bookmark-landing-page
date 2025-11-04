@@ -209,7 +209,7 @@ footer {
 
 .buttons-hero {
   display: flex;
-  gap: 20px;
+  
   justify-content: center;
 }
 
@@ -254,6 +254,8 @@ footer {
   border-style: solid;
   background-color: var(--light-blue);
   border-width: 0px;
+  box-shadow: 5px 5px 5px var(--grey);
+
 
 }
 
@@ -264,8 +266,10 @@ footer {
   border-radius: 5px;
   margin: 20px;
   border-style: solid;
-  background-color: rgb(226, 225, 225);
+  background-color: rgb(245, 243, 243);
   border-width: 0px;
+  box-shadow: 5px 5px 5px var(--grey);
+  
 
   
 }
@@ -300,15 +304,15 @@ footer {
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 50px;*/
-  margin: auto;
-  margin-top: 50px;
+  /* margin: auto;
+  margin-top: 50px; */
   justify-content: center;
 }
 
 .features p {
   max-width: 80%;
   width: 100%;
-  margin: 20px 30px;
+  margin: auto;
   margin-bottom: 40px;
   margin-top: 20px;
   padding-bottom: 10px;
