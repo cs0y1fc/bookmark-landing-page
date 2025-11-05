@@ -12,13 +12,22 @@ body {
   --grey: rgb(141, 141, 141);
   --grey-light: #dddcdc;
 }
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,*:before,*:after {
+  box-sizing: inherit;
+}
+
 
 /* Párrafos y texto normal (Peso 400) */
 body {
   margin:0;
   padding:0;
  
-  font-family: 'Rubik'sans-serif;
+  font-family: 'Rubik', sans-serif;
   /*overflow-x: hidden;*/
   font-size: 16px;
   line-height: 1.6;
@@ -118,18 +127,16 @@ p, .main-header a {
   font-weight: 400;
 }
 
-footer {
+/* footer {
   background-color: rgb(41, 41, 107);
   color: white;
   padding: 20px;
-  align-items: flex-end;
-}
+  
+  /* display: flex;
+  justify-content: space-around; */
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-}
+ */
+
 
 .hero_section {
   display: block;
@@ -157,7 +164,7 @@ footer {
 }
 
 .hero_left {
-  
+  margin: 0 auto;  
   padding-top: 10px;
   justify-content: center;
   align-items: center;
@@ -256,6 +263,9 @@ footer {
   background-color: var(--light-blue);
   border-width: 0px;
   box-shadow: 5px 5px 5px var(--grey);
+  cursor: pointer;
+  text-align: center;
+
 
 
 }
@@ -270,9 +280,8 @@ footer {
   background-color: rgb(245, 243, 243);
   border-width: 0px;
   box-shadow: 5px 5px 5px var(--grey);
-  
-
-  
+  cursor: pointer;
+  text-align: center;
 }
 
 .get-it-chrome:hover {
@@ -503,5 +512,83 @@ label {
     width: 10em;
     height: 3px;
     background-color: var(--orange);
+}
+
+.download-extension  {
+  display: block;
+
+  
+  text-align: center;
+  /*padding-left: 70px; */
+  /*padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;*/
+  /* margin: auto;
+  margin-top: 50px; */
+  justify-content: center;
+}
+
+.download-extension p {
+  max-width: 80%;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 0 px;
+  padding-bottom: 10px;
+  color: var(--grey);
+}
+
+.dotted-line {
+  border-top: 5px dotted #bbb
+}
+
+.download-cards {
+  max-width: 800px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.card {
+  width: 250px;
+
+  height: 400px;
+  box-shadow: 5px 5px 5px 5px var(--grey-light);
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  /*margin: 10px 20px; 
+  justify-content: center; */
+  margin: 0 auto;
+
+}
+
+@media (min-width: 800px) {
+  .download-cards {
+    max-width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 50px);
+    margin: 0 auto;
+    gap: 10px;
+  
+  }
+  .card1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .card2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .card3 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+
 }
 
