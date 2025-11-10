@@ -161,6 +161,7 @@ p, .main-header a {
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 10px;*/
+  
   margin-bottom: 30px;
 }
 
@@ -193,7 +194,7 @@ p, .main-header a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0 auto;  
+  margin: 2rem 3rem;  
   padding-top: 10px;
   justify-content: center;
   align-items: center;
@@ -618,25 +619,24 @@ label {
 
 }
 
+
+
 .faq-section {
   text-align: center;
   margin-bottom: 8rem;
 }
 
-.faq-section .faq-title {
+.faq-title {
   display: flex;
   flex-direction: column;
   width: 400px;
-  justify-content:center; */
-  /*align-items: center;*
-  margin: 30px 30px;
-  */text-align: center;
+  justify-content:center;
+  align-items: center;
+  /* margin: 30px 30px; */
+  text-align: center;
   /* margin-left: 20rem; */
-/* 
- al`ign-items:start; */
+/* align-items:start; */
  margin: 0 auto;
-
-
 }
 
 .faq-section p {
@@ -725,6 +725,8 @@ summary:hover {
 
 }
 
+/* Section Subscribe */
+
 .subscribe-section {
   display: flex;
   color: white;
@@ -732,7 +734,7 @@ summary:hover {
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 20px 0px;
+  margin: 0px 0px;
   background-color: var(--light-blue);
 }
 
@@ -753,7 +755,7 @@ summary:hover {
   }
 .subscribe-section input {
   width: 95%;
-  padding: 15px 20px;
+  padding: 10px 20px;
   margin-bottom: 2rem;
   font-size: 1.5rem;
   border-radius: 5px;
@@ -783,11 +785,21 @@ summary:hover {
   background-color: blueviolet;
 }
 
+
+////////////////////////////
+
+/* Footer */
+
+/////////////////////////////
+
+
 footer {
   display: flex;
   flex-direction: column;
   color:white;
-  background-color: #202294;
+  
+  padding-top: 60rem;
+  background-color: #272755;
 }
 
 .footer-left {
@@ -808,4 +820,16 @@ footer {
 .footer-right svg text,
 .footer-right svg path {
   fill: white !important;
+}
+
+@media (min-width: 800px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer .nav a {
+    display: 
+  }
 }
