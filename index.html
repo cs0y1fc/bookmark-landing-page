@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmark</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="validation.js"></script>
 </head>
 <body>
     <header class="main-header">
@@ -17,10 +18,10 @@
         </div>
         <div class="header-group-right2">
             <nav>
-            <a href="#features">FEATURES</a>
-            <a href="#">PRICING</a>
-            <a href="#">CONTACT</a>
-            <button class="login-button">LOGIN</button>
+                <a href="#features">FEATURES</a>
+                <a href="#">PRICING</a>
+                <a href="#">CONTACT</a>
+                <button class="login-button">LOGIN</button>
             </nav>
         </div>
     </header>
@@ -29,13 +30,13 @@
             <div class="hero_right"> 
                 <div class="blue-box"></div> 
                 <div class="imageBook">
-                    <img width="80%" src="starter-code/images/illustration-hero.svg" alt="Bookmark Illustration">
+                    <img src="starter-code/images/illustration-hero.svg" alt="Bookmark Illustration">
                 </div>
                 
             </div>
             <div class="hero_left">
                 <h1>A Simple Bookmark Manager</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nulla? Provident consequatur, obcaecati deserunt possimus tempora quae numquam vero molestias!</p>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <div class="buttons-hero">
                     <button class="get-it-chrome">Get it on Chrome</button>
                     <button class="get-it-firefox">Get it on Firefox</button>
@@ -109,21 +110,21 @@
                     <h2>Add to Chrome</h2>
                     <p>Minimum version 62</p>
                     <hr class="dotted-line">
-                    <button class="get-it-chrome">Add & Install the Extension</button>
+                    <button class="buttons-download get-it-chrome">Add & Install the Extension</button>
                 </div>
                 <div class="card card2">
                     <img src="starter-code/images/logo-firefox.svg" alt="Logo Firefox">
                     <h2>Add to Firefox</h2>
                     <p>Minimum version 55</p>
                     <hr class="dotted-line">
-                    <button class="get-it-chrome">Add & Install the Extension</button>
+                    <button class="buttons-download get-it-chrome">Add & Install the Extension</button>
                 </div>
                 <div class="card card3">
                     <img src="starter-code/images/logo-opera.svg" alt="Logo Opera">
                     <h2>Add to Opera</h2>
                     <p>Minimum version 46</p>
                     <hr class="dotted-line">
-                    <button class="get-it-chrome">Add & Install the Extension</button>
+                    <button class="buttons-download get-it-chrome">Add & Install the Extension</button>
                 </div>
 
 
@@ -133,48 +134,74 @@
             </div>
         </section>
         <section class="faq-section">
-            <h1>Frequently Asked Questions</h1>
-            <p>Here are some of our FAQs. If you have any other questions you’d like
+            <div class="faq-title">
+                <h1>Frequently Asked Questions</h1>
+                    <p>Here are some of our FAQs. If you have any other questions you’d like
                  answered please feel free to email us</p>
-                <div class="faq-details">
+            </div>    
+                 <div class="faq-details">
                     <details>
-                        <summary>What is Bookmark?</summary>
-                            <article>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
+                        <summary>What the fuck is a Bookmark?</summary>
+                        <article>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
+                                </p>
                             </article>
                     </details>
                     <details>
-                        <summary>Click me</summary>
-                            <article>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
+                        <summary>How can I request a new browser?</summary>
+                        <article>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
+                                </p>
                             </article>
                     </details>
                     <details>
-                        <summary>Click me</summary>
-                            <article>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
+                        <summary>Is there a mobile app?</summary>
+                        <article>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
+                                </p>
                             </article>
                     </details>
                     <details>
-                        <summary>Click me</summary>
-                            <article>
+                        <summary>What about other Chromium browsers?</summary>
+                        <article>
+                            <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam optio voluptates aliquam quisquam deserunt labore provident architecto inventore blanditiis mollitia numquam obcaecati, quae repudiandae. Labore alias id quisquam! Ad, natus?
-                            </article>
+                            </p>
+                        </article>
                     </details>
-                    <button class="button-details get-it-chrome">More Info</button>
+                    </div>
+                    <div class="button-details">
+                        <button class="button-details get-it-chrome">More Info</button>
+                    </div>
+        </section>
+        <section class="subscribe-section" id="contact">
+            <div class="subscribe-title">
+                <p>35.000+ ALREADY JOINED</p>
+                <h2>Stay up-to-date with what we’re doing</h2>
+            </div>
+            <form action="#" method="post>
+                <div class="container">
+                    <input id="Contact-email" type="email" id="email" placeholder="Enter your email address" required>
+        
+               
+                    <input id="Contact-button" type="submit" value="Contact Us">
                 </div>
-        </section>
-        <section class="subscribe-section">
-            <p>35.000+ ALREADY JOINED</p>
-            <h1>Stay up to date with what we’re doing</h1>
-            <form class="subscribe-form">
-                <input type="email" id="email" name="email" placeholder="Enter your email address>
-                <button class="subscribe-button" type="submit>Contact Us</button>
             </form>
+            <div class="message" id="message"></div>
+
+                
 
         </section>
+        <!-- <div class="buttons">
+            <div class="btn-px">usando px</div>
+            <div class="btn-rem">usando rem</div>
+            <div class="btn-em">usando em</div>
+        </div>
 
-
+ -->
 
 
 
@@ -182,7 +209,20 @@
 
     </main>
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <div class="footer-left">
+            <img src="/starter-code/images/logo-bookmark.svg">
+        
+        
+            <nav>
+                <a href="#features">FEATURES</a>
+                <a href="#contact">PRICING</a>
+                <a href="#">CONTACT</a>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <img src="/starter-code/images/icon-facebook.svg" alt="Facebook icon">
+            <svg class="mi-svg" src="/starter-code/images/icon-twitter.svg" alt="Twitter icon">
+        </div>
     </footer>
 </body>
 </html>

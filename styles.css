@@ -6,7 +6,7 @@ body {
 :root {
   --orange: #cc3b17;
   --blue: #202294;
-  --light-blue: hsl(239, 95%, 63%);
+  --light-blue: hsl(239, 74%, 64%);
   --dark-blue: hsl(240, 91%, 27%);
   --red: #fd0000;
   --grey: rgb(141, 141, 141);
@@ -29,7 +29,7 @@ body {
  
   font-family: 'Rubik', sans-serif;
   /*overflow-x: hidden;*/
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.6;
   
   display: flex;
@@ -44,11 +44,14 @@ body {
 
 
 /* Títulos y botones (Peso 500) */
-h1, h2, h3,
+/* h1, h2, h3,
 .login-button,
 .get-it-chrome,
 .get-it-firefox {
   font-weight: 600;
+} */
+h1, h2, h3 {
+  font-weight: 800;
 }
 
 img {
@@ -63,16 +66,24 @@ img {
   align-items: center;
   justify-content: space-between;
   padding-left: 30px;
-  padding-right: 35px;
-  padding-top: 35px;
+  padding-right: 60px;
+  padding-top: 60px;
   padding-bottom: 50px;
   
+}
+.header-group-left {
+
+}
+
+.header-group-right1 {
+
 }
 
 .header-group-left, .header-group-right2, .header-group-right1 {
   display: flex;
   align-items: center;
   gap: 50px;
+
 }
 
 .header-group-right2 {
@@ -161,9 +172,27 @@ p, .main-header a {
   justify-content: center;
   position: relative;
   /*margin: auto; */
+  
 }
 
+.imageBook  {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+.hero-right img {
+  width:80%;
+}
+
+
+
 .hero_left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   margin: 0 auto;  
   padding-top: 10px;
   justify-content: center;
@@ -209,11 +238,6 @@ p, .main-header a {
 }
 
 
-.imageBook  {
-  justify-content: center; */
-  /* margin:auto; */
-  align-items: center;
-}
 
 .buttons-hero {
   display: flex;
@@ -236,9 +260,11 @@ p, .main-header a {
     margin-left: 20px;
     align-items: start;
     justify-content: left;
+    width: 50%;
     
   }
 
+  
   .hero_left p {
     width: 100%;
     justify-content:start;
@@ -273,7 +299,7 @@ p, .main-header a {
 .get-it-firefox {
   
   color: rgb(49, 49, 49);
-  padding: 10px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   margin: 20px;
   border-style: solid;
@@ -516,8 +542,6 @@ label {
 
 .download-extension  {
   display: block;
-
-  
   text-align: center;
   /*padding-left: 70px; */
   /*padding-right: 100px;
@@ -546,17 +570,19 @@ label {
 .download-cards {
   max-width: 800px;
   display: grid;
-  margin: 0 auto;
+  margin: 20px auto;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   justify-content: center;
   gap: 10px;
 }
-
+.buttons-download {
+  padding: 15px 10px;;
+}
 
 .card {
-  width: 250px;
-
+  width: 280px;
+  
   height: 400px;
   box-shadow: 5px 5px 5px 5px var(--grey-light);
   padding: 20px;
@@ -564,7 +590,7 @@ label {
   text-align: center;
   /*margin: 10px 20px; 
   justify-content: center; */
-  margin: 0 auto;
+  margin: 20px auto;
 
 }
 
@@ -592,31 +618,64 @@ label {
 
 }
 
-/* FAQ Section */
-
 .faq-section {
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  justify-content: center;
-  align-items: center;
-  margin: 30px auto;
   text-align: center;
-  
-
-  /* align-items:start; */ */
+  margin-bottom: 8rem;
 }
 
+.faq-section .faq-title {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  justify-content:center; */
+  /*align-items: center;*
+  margin: 30px 30px;
+  */text-align: center;
+  /* margin-left: 20rem; */
+/* 
+ al`ign-items:start; */
+ margin: 0 auto;
+
+
+}
+
+.faq-section p {
+  color: var(--grey);
+}
+
+.faq-title h1 p {
+  margin: 0 auto;
+}
+
+.faq-details {
+  justify-content:flex-start;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+details {
+  background: #ffffff;
+  border-top: 1px solid var(--grey-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+}
+
+article p {
+  text-align: left;
+}
 summary {
   display: block;
   /* list-style: none; */
   display: flex;
-  width: 300px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
+  width: 90%;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding: 10px 0;
   font-weight: bold;
-  border-bottom: 1px solid var(--grey-light);
+  /* border-bottom: 1px solid var(--grey-light); */
 }
 
 details:last-child {
@@ -647,11 +706,7 @@ summary {
 
 details[open] summary {border-radius: 5px 5px 0 0;}
 
-details {
-  background: #ffffff;
-  border-top: 1px solid var(--grey-light);
-  
-}
+
 
 summary:hover {
   color: var(--orange);
@@ -659,22 +714,98 @@ summary:hover {
 }
 
 .button-details {
-  justify-content:center;
+  margin: 20px auto;
+}
+
+
+.button-details {
+  /* justify-content:center;
+  padding: 1rem 2rem;
+  width: 10rem; */
+
 }
 
 .subscribe-section {
   display: flex;
+  color: white;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  margin: 30px 0px;
+  margin: 20px 0px;
   background-color: var(--light-blue);
+}
+
+.subscribe-title {
+  padding-top: 7rem; 
+  /* padding-bottom: 1rem; */
+}
+.subscribe-title > h2 {
+  padding: 0 5rem;;
+  margin-top: 0;
 }
 
 .subscribe-button {
   color: white;
   background-color: red;
-  padding: 5px 10px;
+  padding: 15px 10px;
   text-align: center;
   }
+.subscribe-section input {
+  width: 95%;
+  padding: 15px 20px;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 0;
+}
+#Contact-email {
+  color:var(--grey-light)
+}
+#Contact-button{
+  background-color: var(--red);
+  
+  color: white;
+  font-weight: 800;
+}
+
+.buttons {
+
+}
+
+.btn-px {
+  font-size: 80px;
+  background-color: #cc3b17;
+}
+
+.btn-rem {
+  font-size: 5rem;
+  background-color: blueviolet;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color:white;
+  background-color: #202294;
+}
+
+.footer-left {
+  justify-content: center;
+  text-align: center;
+}
+.footer-left nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.footer-right svg text,
+.footer-right svg path {
+  fill: white !important;
+}
