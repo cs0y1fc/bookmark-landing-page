@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookmark</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="validation.js"></script>
+    
 </head>
 <body>
     <header class="main-header">
@@ -182,15 +182,17 @@
                 <p>35.000+ ALREADY JOINED</p>
                 <h2>Stay up-to-date with what we’re doing</h2>
             </div>
-            <form action="#" method="post>
-                <div class="container">
-                    <input id="Contact-email" type="email" id="email" placeholder="Enter your email address" required>
-        
-               
-                    <input id="Contact-button" type="submit" value="Contact Us">
+            <form id="emailForm">
+                <div class="subscribe-button-container">
+                    <input id="Contact-email" type="text" id="emailInput" placeholder="Enter your email address" required>
+                    <input class="contact-button" type="submit" value="Contact Us">
                 </div>
+            <p id="message"></p>
             </form>
-            <div class="message" id="message"></div>
+
+            <script src="/validation2.js" defer></script>
+
+
 
                 
 
@@ -203,26 +205,42 @@
 
  -->
 
-
-
-
-
     </main>
-    <footer>
+
+    <!-- <footer>
         <div class="footer-left">
             <img src="/starter-code/images/logo-bookmark.svg">
         
         
             <div class="nav">
                 <a href="#features">FEATURES</a>
-                <a href="#contact">PRICING</a>
-                <a href="#">CONTACT</a>
+                <a href="#">PRICING</a>
+                <a href="#contact">CONTACT</a>
             </div>
         </div>
         <div class="footer-right">
             <img src="/starter-code/images/icon-facebook.svg" alt="Facebook icon">
-            <svg class="mi-svg" src="/starter-code/images/icon-twitter.svg" alt="Twitter icon">
+            <img src="/starter-code/images/icon-twitter.svg" alt="Twitter icon"></img>
         </div>
-    </footer>
+    </footer> -->
+
+    <footer>
+        <div class="footer-left">
+            <!-- He usado un placeholder para el logo -->
+            <img src="starter-code/images/logo-bookmark.svg" alt="Logo Bookmark">
+        
+            <div class="nav">
+                <a href="#features">FEATURES</a>
+                <a href="#">PRICING</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <!-- He usado placeholders para los iconos -->
+            <img src="starter-code/images/icon-facebook.svg" alt="Facebook icon">
+            <img src="starter-code/images/icon-twitter.svg" alt="Twitter icon">
+        </div>
+    </footer
+
 </body>
 </html>

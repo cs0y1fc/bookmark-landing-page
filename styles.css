@@ -1,14 +1,10 @@
-/*
-body {
-  margin
-}
-*/
+
 :root {
   --orange: #cc3b17;
   --blue: #202294;
   --light-blue: hsl(239, 74%, 64%);
   --dark-blue: hsl(240, 91%, 27%);
-  --red: #fd0000;
+  --red: #fd5959;
   --grey: rgb(141, 141, 141);
   --grey-light: #dddcdc;
 }
@@ -28,16 +24,13 @@ body {
   padding:0;
  
   font-family: 'Rubik', sans-serif;
-  /*overflow-x: hidden;*/
+
   font-size: 1.6rem;
   line-height: 1.6;
   
   display: flex;
   flex-direction: column;
- /*  align-items: center;
-  justify-content: center */
-  /*place-items: center; */
-  /*min-height: 100vh;*/
+ 
 }
 
 
@@ -59,6 +52,11 @@ img {
   height: auto;
 } 
 
+.content {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
 
 
 .main-header {
@@ -138,29 +136,16 @@ p, .main-header a {
   font-weight: 400;
 }
 
-/* footer {
-  background-color: rgb(41, 41, 107);
-  color: white;
-  padding: 20px;
-  
-  /* display: flex;
-  justify-content: space-around; */
 
- */
-
+/* Hero Section */
 
 .hero_section {
   display: block;
-  /*flex-direction: column;*/
+
   justify-content: center; 
   align-items: center;
   text-align: center;
-  /*margin: auto;
-  /*padding-left: 70px; 
-  padding-right: 100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  gap: 10px;*/
+ 
   
   margin-bottom: 30px;
 }
@@ -324,25 +309,14 @@ p, .main-header a {
 }
 
 
-/*.features h1 p {
-  /*display: flex; *
-  flex-direction: column;
-  justify-content: center;
-  
-  text-align: center;}*/
+
 
 .features {
   display: flex;
   flex-direction: column;
   position: relative;
   text-align: center;
-  /*padding-left: 70px; */
-  /*padding-right: 100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  gap: 50px;*/
-  /* margin: auto;
-  margin-top: 50px; */
+
   justify-content: center;
 }
 
@@ -374,25 +348,6 @@ input[type="radio"] {
 
 
 
-/* .tab-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  position:relative;
-
-} */
-
-/* --- Configuración básica para centrarlo --- */
-/*body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-*/
 
 .tabs-container {
     width: 100%;
@@ -599,7 +554,7 @@ label {
   .download-cards {
     max-width: 800px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 50px);
+    grid-template-rows: repeat(10, 50px);
     margin: 0 auto;
     gap: 10px;
   
@@ -622,6 +577,7 @@ label {
 
 
 .faq-section {
+  display: block;
   text-align: center;
   margin-bottom: 8rem;
 }
@@ -725,7 +681,9 @@ summary:hover {
 
 }
 
+
 /* Section Subscribe */
+
 
 .subscribe-section {
   display: flex;
@@ -742,71 +700,86 @@ summary:hover {
   padding-top: 7rem; 
   /* padding-bottom: 1rem; */
 }
+
 .subscribe-title > h2 {
   padding: 0 5rem;;
   margin-top: 0;
 }
 
 .subscribe-button {
-  color: white;
+  
   background-color: red;
   padding: 15px 10px;
   text-align: center;
   }
+
 .subscribe-section input {
-  width: 95%;
+  width: 80%;
   padding: 10px 20px;
   margin-bottom: 2rem;
   font-size: 1.5rem;
   border-radius: 5px;
   border: 0;
 }
+
 #Contact-email {
-  color:var(--grey-light)
+  color: rgb(110, 109, 109);
 }
-#Contact-button{
+
+.contact-button{
   background-color: var(--red);
   
   color: white;
   font-weight: 800;
 }
 
-.buttons {
-
+.subscribe-button-container {
+  padding-bottom: rem;
 }
 
-.btn-px {
-  font-size: 80px;
-  background-color: #cc3b17;
+#message {
+  margin-top: 16px;
+  font-size: 0.9em;
+  text-align: center;
 }
 
-.btn-rem {
-  font-size: 5rem;
-  background-color: blueviolet;
+.success {
+  color: green;
 }
 
+.error {
+  color: red;
+}
 
-////////////////////////////
+@media (min-width: 800px) {
+  .subscribe-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
 
 /* Footer */
 
-/////////////////////////////
 
 
-footer {
+
+
+/* footer {
   display: flex;
   flex-direction: column;
   color:white;
   
-  padding-top: 60rem;
-  background-color: #272755;
+  padding-top: 5rem;
+  background-color: #323277;
 }
 
 .footer-left {
   justify-content: center;
   text-align: center;
 }
-.footer-left nav {
+.footer-left .nav {
   display: flex;
   flex-direction: column;
 }
@@ -817,19 +790,121 @@ footer {
   padding: 1rem;
 }
 
-.footer-right svg text,
-.footer-right svg path {
-  fill: white !important;
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  padding: 1rem;
+
 }
 
-@media (min-width: 800px) {
-  footer {
-    display: flex;
+.footer-right img {
+  padding: 1rem;
+}
+ */
+/* .footer-right svg text,
+.footer-right svg path {
+  fill: white !important;
+} */
+
+/* @media (min-width: 800px) { */
+/*   footer {
+    display: inline;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-right {
+    display:inline;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  footer .nav a {
-    display: 
+  .footer-left .nav {
+    display:inline;
+    flex-direction: row;
+    justify-content: space-between;
+    
   }
-}
+ */
+footer {
+            display: flex;
+            flex-direction: column; /* .footer-left y .footer-right uno encima del otro */
+            align-items: center; /* Centra los bloques en móvil */
+            color: white;
+            padding: 3rem 1.5rem; /* Padding vertical y horizontal */
+            background-color: #252B46; /* Un color oscuro de ejemplo */
+        }
+
+        .footer-left {
+            display: flex;
+            flex-direction: column; /* Logo encima del nav */
+            align-items: center; /* Centra el logo y el nav */
+            width: 100%;
+        }
+
+        .footer-left .nav {
+            display: flex;
+            flex-direction: column; /* Enlaces uno encima del otro */
+            align-items: center; /* Centra los enlaces */
+            margin-top: 2rem; /* Espacio entre logo y nav */
+        }
+
+        .footer-left img {
+            /* Ajusta el tamaño del logo si es necesario */
+            max-width: 150px;
+        }
+
+        .footer-left a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            letter-spacing: 1px;
+        }
+        
+        .footer-left a:hover {
+            color: #FA5757; /* Color de hover de ejemplo */
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: row; /* Iconos siempre en fila */
+            justify-content: center;
+            margin-top: 2.5rem; /* Espacio entre nav y redes sociales */
+        }
+
+        .footer-right img {
+            padding: 0 1rem; /* Espacio entre iconos */
+            cursor: pointer;
+        }
+
+
+
+  @media (min-width: 800px) {
+            footer {
+                flex-direction: row; /* 1. Pone .footer-left y .footer-right en fila */
+                justify-content: space-between; /* 2. Los separa a los extremos */
+                align-items: center; /* 3. Los alinea verticalmente al centro */
+                padding: 2rem 5%; /* Ajusta el padding para desktop */
+            }
+
+            .footer-left {
+                flex-direction: row; /* 4. Pone el logo y .nav en fila */
+                align-items: center; /* 5. Alinea logo y .nav verticalmente */
+                width: auto; /* Resetea el ancho */
+            }
+
+            .footer-left .nav {
+                flex-direction: row; /* 6. Pone los enlaces <a> en fila */
+                margin-top: 0; /* Resetea el margen superior */
+                margin-left: 3rem; /* 7. Añade espacio entre el logo y los enlaces */
+            }
+
+            .footer-right {
+                margin-top: 0; /* Resetea el margen superior */
+            }
+        }
+
+
+
+
+
