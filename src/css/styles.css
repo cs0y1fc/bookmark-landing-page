@@ -163,6 +163,7 @@ p, .main-header a {
 
 .imageBook  {
   display: flex;
+  width: 80%;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
@@ -249,7 +250,9 @@ p, .main-header a {
     width: 50%;
     
   }
-
+  .hero-right {
+    flex:1;
+  }
   
   .hero_left p {
     width: 100%;
@@ -308,7 +311,7 @@ p, .main-header a {
     background-color: hsl(0, 0%, 100%); /* Color al pasar el ratón */
 }
 
-
+/* Section Features */
 
 
 .features {
@@ -496,6 +499,9 @@ label {
     background-color: var(--orange);
 }
 
+/* Section Download Extension */
+
+
 .download-extension  {
   display: block;
   text-align: center;
@@ -554,9 +560,11 @@ label {
   .download-cards {
     max-width: 800px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(10, 50px);
+    grid-template-rows: repeat(3, 50px);
     margin: 0 auto;
-    gap: 10px;
+    gap: 5rem;
+    padding-bottom: 40rem;
+    
   
   }
   .card1 {
@@ -574,7 +582,7 @@ label {
 
 }
 
-
+/* Section FAQ */
 
 .faq-section {
   display: block;
@@ -905,6 +913,6 @@ footer {
         }
 
 
-
-
-
+.mi-palabra-svg {
+  fill: white;
+}
