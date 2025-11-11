@@ -164,7 +164,7 @@ p, .main-header a {
 .imageBook  {
   display: flex;
   width: 80%;
-  justify-content: center;
+  justify-content:center;
   margin: 0 auto;
   align-items: center;
 }
@@ -237,21 +237,22 @@ p, .main-header a {
     display: flex;
     flex-direction: row-reverse;
     
-    margin: 20px 0px 10px 20px;
+    /* margin: 20px 0px 10px 20px; */
   }
 
   .hero_left {
     flex: 1;
     flex-direction: column;
     text-align: left; 
-    margin-left: 20px;
+    /* margin-left: 20px; */
     align-items: start;
-    justify-content: left;
+    justify-content:center;
     width: 50%;
     
   }
   .hero-right {
     flex:1;
+    justify-content: center;
   }
   
   .hero_left p {
