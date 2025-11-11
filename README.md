@@ -28,9 +28,9 @@ This project is developed in three distinct branches for the distinct iterations
 
 ---
 
-## 🏗️ Page Structure (Iteration 1)
+## 🏗️ Page Structure for Vanilla CSS (Iteration 1)
 
-The HTML structure is semantic and divided into the following main sections, as specified in the project briefing:
+The HTML structure is semantic and divided into the following main sections:
 
 * **Header:** Contains the logo and the main navigation bar.
 * **Hero Section:** The main "call to action" block with the primary heading.
