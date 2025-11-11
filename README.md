@@ -1,6 +1,6 @@
 # Bookmark Landing Page
 
-This repository contains the solution for the main goal to build a responsive landing page following web design web patterns and Web Content Accessibility Guidelines (WCAG).
+This repository contains the solution for the main goal to build a responsive landing web page following design web patterns and Web Content Accessibility Guidelines (WCAG).
 
 
 
@@ -45,7 +45,7 @@ The HTML structure is semantic and divided into the following main sections, as 
 
 * **HTML5** (Semantic)
 * **CSS3** (Custom Properties, Flexbox, Grid)
-* **Vanilla JavaScript** (for interactive elements)
+* **Vanilla JavaScript** (to style HTML elements)
 
 ## 📦 Getting Started
 
