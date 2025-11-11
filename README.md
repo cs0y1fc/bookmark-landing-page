@@ -1,14 +1,12 @@
-# Bookmark Landing Page (Frontend Mentor Challenge)
+# Bookmark Landing Page
 
-This repository contains the solution for the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0bE8A8). This project is part of the IT Academy BCN's front-end specialization sprint.
-
-The main goal is to build a pixel-perfect, responsive landing page based on the provided design files.
+This repository contains the solution for the main goal to build a responsive landing page following web design web patterns and Web Content Accessibility Guidelines (WCAG).
 
 
 
 ## 🚀 Project Iterations
 
-This project is developed in three distinct iterations to demonstrate a progression in styling techniques.
+This project is developed in three distinct branches for the distinct iterations to demonstrate a progression in styling techniques.
 
 ### Iteration 1: HTML & CSS (Vanilla)
 
