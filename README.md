@@ -1,42 +1,63 @@
-# Bookmark Landing Page
+# Bookmark Landing Page (Frontend Mentor Challenge)
 
-This project is a solution to the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0bE8A8). It is a fully responsive, pixel-perfect landing page built with React, Vite, and Tailwind CSS.
+This repository contains the solution for the [Bookmark landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/bookmark-landing-page-5d0bE8A8). This project is part of the IT Academy BCN's front-end specialization sprint.
+
+The main goal is to build a pixel-perfect, responsive landing page based on the provided design files.
 
 
 
-## ✨ Features
+## 🚀 Project Iterations
 
-* **Responsive Design:** Looks great on all devices, from mobile phones to desktops.
-* **Interactive Tabs:** A clean, tabbed interface for showcasing product features.
-* **FAQ Accordion:** A collapsible accordion for the "Frequently Asked Questions" section.
-* **Email Validation:** Client-side validation for the contact form.
+This project is developed in three distinct iterations to demonstrate a progression in styling techniques.
 
-## 🚀 Live Demo
+### Iteration 1: HTML & CSS (Vanilla)
 
-*(Optional: Add a link to your live demo here, e.g., on GitHub Pages or Vercel)*
+**This branch/repository contains the code for Iteration 1.**
 
-`https://your-live-demo-link.com`
+* **Objective:** Build the complete landing page layout using only semantic **HTML5** and **Vanilla CSS3**.
+* **Focus:** Correctly structuring the DOM, implementing a responsive design using media queries, and styling all components from scratch.
+* **JavaScript:** Vanilla JavaScript is used for interactive elements like the FAQ accordion and tabbed features section.
+
+### Iteration 2: SASS Refactor (Future)
+
+* **Objective:** Refactor the entire CSS codebase using **SASS**.
+* **Focus:** Improve code maintainability, organization, and reusability by implementing SASS features like variables, nesting, partials, and mixins.
+
+### Iteration 3: Style Library Refactor (Future)
+
+* **Objective:** Refactor the design using a modern CSS framework or utility library.
+* **Focus:** Re-implementing the landing page using either **Bootstrap** or **Tailwind CSS** to demonstrate proficiency with popular industry tools and component-based styling.
+
+---
+
+## 🏗️ Page Structure (Iteration 1)
+
+The HTML structure is semantic and divided into the following main sections, as specified in the project briefing:
+
+* **Header:** Contains the logo and the main navigation bar.
+* **Hero Section:** The main "call to action" block with the primary heading.
+* **Features:** Tabbed section to display different product features.
+* **"Bookmark in one click":** A feature section highlighting ease of use.
+* **Download the Extension:** Cards displaying browser compatibility (Chrome, Firefox, Opera).
+* **FAQ Section:** A collapsible accordion for frequently asked questions.
+* **Subscribe Form Section:** A "Stay up-to-date" call-to-action with an email input form.
+* **Footer:** Contains secondary navigation links and social media icons.
 
 ## 🛠️ Built With
 
-* **[React](https://reactjs.org/)**: A JavaScript library for building user interfaces.
-* **[Vite](https://vitejs.dev/)**: A modern frontend build tool that provides a faster and leaner development experience.
-* **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+* **HTML5** (Semantic)
+* **CSS3** (Custom Properties, Flexbox, Grid)
+* **Vanilla JavaScript** (for interactive elements)
 
 ## 📦 Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-You need to have [Node.js](https://nodejs.org/) (version 18 or newer) and [npm](https://www.npmjs.com/) installed on your machine.
+You must have [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/) (which includes npm) installed on your computer.
 
-* **npm**
-    ```sh
-    npm install npm@latest -g
-    ```
-
-### Installation
+### Installation & Setup
 
 1.  **Clone the repository:**
     ```sh
@@ -49,14 +70,20 @@ You need to have [Node.js](https://nodejs.org/) (version 18 or newer) and [npm](
     ```
 
 3.  **Install dependencies:**
-    This will install all the necessary packages defined in `package.json`.
+    *(This project uses `npm` to manage development dependencies, such as a live server or linters, as defined in `package.json`.)*
     ```sh
     npm install
     ```
 
 ### Running the Project
 
-To run the app in development mode, use the following command. This will start the Vite development server, typically at `http://localhost:5173/`.
+You have two main options to view the project:
+
+**Option 1: (Recommended) Run the development server:**
+
+If your `package.json` has a `start` or `dev` script (e.g., for `lite-server`):
 
 ```sh
 npm run dev
+# or
+npm run start
