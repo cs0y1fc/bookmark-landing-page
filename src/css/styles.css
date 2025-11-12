@@ -437,7 +437,7 @@ label {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .tab-labels {
     flex-direction: row;
     border-bottom: 1px solid #868686; /* Mover el borde al contenedor */
@@ -706,13 +706,20 @@ summary:hover {
 }
 
 .subscribe-title {
-  padding-top: 7rem; 
+  padding-top: 7rem;
+  margin: 0 5rem;
   /* padding-bottom: 1rem; */
 }
 
 .subscribe-title > h2 {
   padding: 0 5rem;;
   margin-top: 0;
+}
+
+.subscribe-button-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem;
 }
 
 .subscribe-button {
@@ -723,7 +730,7 @@ summary:hover {
   }
 
 .subscribe-section input {
-  width: 80%;
+  width: 25rem;
   padding: 10px 20px;
   margin-bottom: 2rem;
   font-size: 1.5rem;
@@ -742,9 +749,7 @@ summary:hover {
   font-weight: 800;
 }
 
-.subscribe-button-container {
-  padding-bottom: rem;
-}
+
 
 #message {
   margin-top: 16px;
