@@ -2,7 +2,7 @@
 
 This repository contains the solution for the main goal to build a responsive landing web page following design web patterns and Web Content Accessibility Guidelines (WCAG).
 
-
+---
 
 ## 🚀 Project Iterations
 
@@ -41,11 +41,15 @@ The HTML structure is semantic and divided into the following main sections:
 * **Subscribe Form Section:** A "Stay up-to-date" call-to-action with an email input form.
 * **Footer:** Contains secondary navigation links and social media icons.
 
+---
+
 ## 🛠️ Built With
 
 * **HTML5** (Semantic)
 * **CSS3** (Custom Properties, Flexbox, Grid)
 * **Vanilla JavaScript** (to style HTML elements)
+
+---
 
 ## 📦 Getting Started
 
@@ -67,7 +71,12 @@ You must have [Git](https://git-scm.com/) and [Node.js](https://nodejs.org/) (wh
     cd bookmark-landing-page
     ```
 
-3.  **Install dependencies:**
+3.  **Checkout the development branch for Iteration 1:**
+    ```sh
+    git checkout feature/vanilla-implementation
+    ```
+
+4.  **Install dependencies:**
     *(This project uses `npm` to manage development dependencies, such as a live server or linters, as defined in `package.json`.)*
     ```sh
     npm install
