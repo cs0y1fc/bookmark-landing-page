@@ -557,7 +557,7 @@ label {
 
 }
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .download-cards {
     max-width: 800px;
     grid-template-columns: repeat(3, 1fr);
@@ -893,7 +893,7 @@ footer {
 
 
 
-  @media (min-width: 800px) {
+  @media (min-width: 600px) {
             footer {
                 flex-direction: row; /* 1. Pone .footer-left y .footer-right en fila */
                 justify-content: space-between; /* 2. Los separa a los extremos */
@@ -919,6 +919,6 @@ footer {
         }
 
 
-.mi-palabra-svg {
+.svg-image {
   fill: white;
 }
