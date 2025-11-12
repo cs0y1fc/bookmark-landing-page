@@ -719,7 +719,7 @@ summary:hover {
 .subscribe-button-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: rem;
+  padding-bottom: 1rem;
 }
 
 .subscribe-button {
@@ -731,7 +731,7 @@ summary:hover {
 
 .subscribe-section input {
   width: 25rem;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-bottom: 2rem;
   font-size: 1.5rem;
   border-radius: 5px;
@@ -770,6 +770,11 @@ summary:hover {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+  }
+
+  input.contact-button {
+    width: 10rem;
+    padding: 10px auto;
   }
 }
 
