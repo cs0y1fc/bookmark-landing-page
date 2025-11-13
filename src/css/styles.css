@@ -924,6 +924,12 @@ footer {
         }
 
 
-.svg-image {
+/* .svg-image {
+  fill: white;
+} */
+
+
+
+svg path:first-of-type {
   fill: white;
 }
