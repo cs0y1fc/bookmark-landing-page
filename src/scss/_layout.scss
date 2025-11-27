@@ -1,0 +1,279 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3 {
+  font-weight: $font-weight-bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-header {
+  @include flex-center(row, space-between);
+  padding: 60px 60px 50px 30px;
+
+  a {
+    text-decoration: none;
+    color: $black;
+    font-weight: $font-weight-regular;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .header-group-left,
+  .header-group-right1,
+  .header-group-right2 {
+    @include flex-center();
+    gap: 50px;
+  }
+
+  .header-group-right1 {
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  .header-group-right2 {
+    display: none;
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+.hero_section {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+
+  .hero_left {
+    @include flex-center(column);
+    margin: 2rem 3rem;
+    padding-top: 10px;
+
+    p {
+      width: 85%;
+      color: $grey;
+      margin: auto;
+    }
+
+    .buttons-hero {
+      @include flex-center();
+    }
+  }
+
+  .hero_right {
+    position: relative;
+    .imageBook {
+      @include flex-center();
+      width: 80%;
+      margin: 0 auto;
+    }
+    .blue-box {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      width: 70%;
+      height: 70%;
+      background-color: $light-blue;
+      border-radius: 0 0 0 125px;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .hero_left {
+      flex: 1;
+      text-align: left;
+      align-items: flex-start;
+      width: 50%;
+      p {
+        width: 100%;
+        margin: 0 0 30px;
+      }
+      .buttons-hero {
+        justify-content: flex-start;
+      }
+    }
+    .hero_right {
+      flex: 1;
+    }
+  }
+}
+
+.features {
+  @include flex-center(column);
+  position: relative;
+  text-align: center;
+
+  p {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding-bottom: 10px;
+    color: $grey;
+  }
+}
+
+.download-extension {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  p {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding-bottom: 10px;
+    color: $grey;
+  }
+}
+
+.faq-section {
+  display: block;
+  text-align: center;
+  margin-bottom: 8rem;
+
+  .faq-title {
+    @include flex-center(column);
+    width: 400px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  p {
+    color: $grey;
+  }
+}
+
+.subscribe-section {
+  @include flex-center(column);
+  color: $white;
+  text-align: center;
+  margin: 0;
+  background-color: $light-blue;
+
+  .subscribe-title {
+    padding-top: 7rem;
+    margin: 0 5rem;
+    h2 {
+      padding: 0 5rem;
+      margin-top: 0;
+    }
+  }
+
+  .subscribe-button-container {
+    @include flex-center(column);
+    padding-bottom: 1rem;
+
+    @media (min-width: 800px) {
+      flex-direction: row;
+      gap: 2rem;
+
+      input.contact-button {
+        width: 10rem;
+        padding: 10px auto;
+      }
+    }
+  }
+}
+
+footer {
+  @include flex-center(column);
+  color: $white;
+  padding: 3rem 1.5rem;
+  background-color: $footer-bg;
+
+  .footer-left {
+    @include flex-center(column);
+    width: 100%;
+
+    .nav {
+      @include flex-center(column);
+      margin-top: 2rem;
+    }
+
+    img {
+      max-width: 150px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #FA5757;
+      }
+    }
+  }
+
+  .footer-right {
+    @include flex-center(row);
+    margin-top: 2.5rem;
+
+    img {
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 5%;
+
+    .footer-left {
+      flex-direction: row;
+      width: auto;
+
+      .nav {
+        flex-direction: row;
+        margin-top: 0;
+        margin-left: 3rem;
+      }
+    }
+
+    .footer-right {
+      margin-top: 0;
+    }
+  }
+}
+

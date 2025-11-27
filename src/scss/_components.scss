@@ -1,0 +1,290 @@
+// Buttons
+.login-button {
+  background-color: $red;
+  color: $white;
+  padding: 5px 10px;
+  border: 2px solid $red;
+  border-radius: 5px;
+  margin-left: 30px;
+  font-size: 14px;
+  font-weight: $font-weight-regular;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $orange;
+    border-color: $orange;
+    background-color: $white;
+  }
+}
+
+.get-it-chrome,
+.get-it-firefox {
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin: 20px;
+  border: 1px solid transparent;
+  box-shadow: 5px 5px 5px $grey;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.get-it-chrome {
+  background-color: $light-blue;
+  color: $white;
+
+  &:hover {
+    color: $light-blue;
+    border-color: $light-blue;
+    background-color: hsl(0, 0%, 98%);
+  }
+}
+
+.get-it-firefox {
+  background-color: $light-grey-background;
+  color: $dark-grey-text;
+
+  &:hover {
+    color: $black;
+    border-color: $black;
+    background-color: $white;
+  }
+}
+
+.contact-button {
+  background-color: $red;
+  color: $white;
+  font-weight: $font-weight-bold;
+
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+}
+
+// Tabs
+.tabs-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .tab-labels {
+    @include flex-center(column);
+    padding-bottom: 0;
+    margin: 0 10% 40px;
+  }
+
+  .tab-label {
+    position: relative;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    color: $grey;
+    border-bottom: 1px solid $grey-light;
+    width: 100%;
+
+    &:first-child {
+      border-top: 1px solid $grey-light;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .tab-content-area .content {
+    display: none;
+    flex-direction: column;
+    margin: 30px 0;
+    gap: 30px;
+
+    .more-inf-button {
+      display: none;
+    }
+  }
+
+  #tab1:checked ~ .tab-content-area #content1,
+  #tab2:checked ~ .tab-content-area #content2,
+  #tab3:checked ~ .tab-content-area #content3 {
+    display: flex;
+  }
+
+  #tab1:checked ~ .tab-labels label[for="tab1"],
+  #tab2:checked ~ .tab-labels label[for="tab2"],
+  #tab3:checked ~ .tab-labels label[for="tab3"] {
+    color: $black;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10em;
+      height: 3px;
+      background-color: $orange;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    .tab-labels {
+      flex-direction: row;
+      border-bottom: 1px solid #868686;
+    }
+    .tab-label {
+      border-bottom: none;
+      &:first-child {
+        border-top: none;
+      }
+    }
+    .tab-content-area .content {
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+
+      > div {
+        flex: 1;
+        text-align: left;
+
+        &:nth-child(2) {
+          h3, p {
+            margin-left: 0;
+            margin-right: 0;
+          }
+          p {
+            margin-bottom: 20px;
+          }
+          .get-it-chrome {
+            margin-left: 0;
+          }
+        }
+      }
+      .more-inf-button {
+        display: block;
+      }
+    }
+  }
+}
+
+// Cards
+.download-cards {
+  max-width: 800px;
+  display: grid;
+  margin: 20px auto;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  gap: 10px;
+
+  .card {
+    width: 280px;
+    height: 400px;
+    box-shadow: 5px 5px 5px 5px $grey-light;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .buttons-download {
+    padding: 15px 10px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    padding-bottom: 40rem;
+    margin: 0 auto;
+
+    .card1 {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    .card2 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+    .card3 {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }
+  }
+}
+
+// FAQ Section
+.faq-details {
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: 80%;
+
+  details {
+    background: $white;
+    border-top: 1px solid $grey-light;
+    @include flex-center(column, center, flex-start);
+
+    &:last-child {
+      border-bottom: 1px solid $grey-light;
+    }
+
+    summary {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 10px 0;
+      font-weight: $font-weight-bold;
+      color: #30353b;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &::after {
+        content: "⯅";
+        transition: 0.2s;
+        color: $blue;
+        transform: rotate(180deg);
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    &[open] > summary {
+      border-bottom: 2px solid #fff9f1;
+
+      &::after {
+        transform: rotate(0deg);
+        color: $orange;
+      }
+    }
+  }
+
+  article p {
+    text-align: left;
+  }
+}
+
+// Subscribe Form
+.subscribe-section {
+  input {
+    width: 25rem;
+    padding: 10px;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 0;
+  }
+
+  #Contact-email {
+    color: rgb(110, 109, 109);
+  }
+}
